@@ -1,2 +1,3 @@
 *.swp
 elm-stuff/*
+examples/elm-stuff/*
