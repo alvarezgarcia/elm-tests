@@ -39,5 +39,6 @@ main =
                                 , th [] [ text "Raza" ]
                                 ]
                         ]
-                , tbody [] (List.map printMascotas listaMascotas)
+                , tbody []
+                                (List.map printMascotas listaMascotas)
                   ]
