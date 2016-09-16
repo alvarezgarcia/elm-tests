@@ -6,58 +6,38 @@ type alias Mascota =
         , raza : String
         }
 
-neron =
-        { nombre = "Neron"
-        , animal = "Perro"
-        , raza = "Calle"
+mascota1 =
+        { nombre = "Lorenzo"
+        , animal = "Gato"
+        , raza = "Gordo"
         }
 
-pascual =
+mascota2 =
         { nombre = "Pascualito"
         , animal = "Perro"
-        , raza = "Calle"
+        , raza = "EZpezial"
         }
 
 listaMascotas =
         [
-                neron
-                ,pascual
+                mascota1
+                ,mascota2
         ]
 
-
+printMascotas m = 
+        tr []
+                [ td [] [ text m.nombre ]
+                , td [] [ text m.animal ]
+                , td [] [ text m.raza ]
+                ]
 main = 
-        div [] [
-
-        ]
-
-{-
-        (List.map (\ mascota -> 
-                br [] []
-        ) listaMascotas)
-        -- div [] (List.map printMascota listaMascotas)
-
-        div [] [
-          text ("Hola " ++ miMascota.nombre)
-          ,table [] [
-                  
-                  
-          ]
-        ]
-
-  [ thead []
-      [ tr []
-          [ th [ ascending ] [ text "Material" ]
-          , th [ numeric ] [ text "Quantity" ]
-          , th [ numeric ] [ text "Unit Price" ]
-          ]
-      ]
-  , tbody []
-      [ tr []
-          [ td [] [ text "Acrylic (Transparent)" ]
-          , td [ numeric ] [ text "25" ]
-          , td [ numeric ] [ text "$2.90" ]
-          ]
-      {- ... -}
-      ]
-  ]
--}
+        table []
+                [ thead []
+                        [ tr []
+                                [ th [] [ text "Nombre" ]
+                                , th [] [ text "Animal" ]
+                                , th [] [ text "Raza" ]
+                                ]
+                        ]
+                , tbody [] (List.map printMascotas listaMascotas)
+                  ]
