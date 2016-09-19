@@ -35,7 +35,6 @@ view =
         div [] [
                  h1 [] [ text "Hola" ]
                 ,ul [] (List.map (\m ->
-                                printMascotas m,
                                 printMascotas m
                                 )
                         listaMascotas)
