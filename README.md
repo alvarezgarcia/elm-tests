@@ -1,7 +1,6 @@
 ## elm-tests
 
 ### elm-reactor
-cd examples
 elm-reactor
 
 
